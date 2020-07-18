@@ -1,0 +1,24 @@
+[
+    {
+        "id":1,
+        "Course":"React",
+        "Title":"Basics of React",
+        "Body":"React is a JavaScript library build in 2013 by the Facebook development team to make user interfaces more modular (or reusable) and easier to maintain. According to React's website, it is used to Build encapsulated components that manage their own state, then compose them to make complex UIs",
+        "Image":"react1.png"
+
+    },
+    {
+        "id":2,
+        "Course":"React",
+        "Title":"Landing template for startups",
+        "Body":"Open is a free React template created for developers who want to create a quick and professional landing page for their open source projects, online services, digital products, and more. With an aim to capture leads and email subscribers, Open offers a versatile library of sleek, minimalistic, and reusable components and elements.\nFeatures:\n* Designed for open source products and online services\n* Dark and minimalistic design\n* Fully downloadable via Github",
+        "Image":"react2.jpg"
+    },
+    {
+        "id":3,
+        "Course":"React",
+        "Title":"Best free resources to learn React",
+        "Body":"Over recent years, React has grown to become the most popular and widely-used JavaScript UI library (or framework as some might call it) out there. And with this popularity came a lot of new opportunities for both fresh and mature web developers through tons of new jobs, offers, and other React-connected tasks that are currently flooding the market.Following are the best Resources\n* Official documentation \n *Video courses\n *Learnt React\n *FreeCodeCamp",
+        "Image":"react3.jpeg"
+    }
+]

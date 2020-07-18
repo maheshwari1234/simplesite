@@ -1,39 +1,56 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
+import {Image} from "react-bootstrap";
+import PostData from "./postdata.json"
 
-const IndividualPost=(props)=>{
-const [post,setPost]=useState({})
+// console.log("in individual post",PostData.id)
 
-console.log("individual post")
-console.log("props in ind",props)
-useEffect(()=>{
-   
-    const id=props.match.params.id
-    console.log("id is ",id)
-    Axios.get("https://jsonplaceholder.typicode.com/posts/"+id).then((res)=>{
-        setPost(res.data)
-    })
-    .catch((err)=>{
-        console.log("error",err)
-    })
-},[])
+class IndividualPost extends React.Component{
+    render(){
 
-return(
-<div className="row">
-    <div className="offset-3 col-md-6">
-        <div className="card-title">
-<h4 style={{color:"blue"}}>{post.title}</h4>
+        return(
 
-        </div>
-        <div className="card-body">
-<h5>{post.body}</h5>
+ PostData.map((data,i) => {
+     console.log("data in array",data.id)
+    if(data.id==this.props.match.params.id){
 
-        </div>
+        return(
+          <div className="row">
+              <div className="card">
+              <div className="offset-2 col-sm-6">
+                  <div className="card-title">
+        <h2>{data.Title}</h2>
 
-    </div>
+                  </div>
+                  <div className="card-body">
+        <Image src={`/${data.Image}`} alt="image not found"/><br/><br/>
+        <h5>{data.Body}</h5>
+                  </div>
 
-</div>    
-)
+              </div>
+              
+<div></div>
+              </div>
 
+        //   </div>
+
+        )
+
+    }
+    
+
+                  
+              
+})
+
+
+              
+            )
+    }
 }
+
+
+
+
+
 export default IndividualPost

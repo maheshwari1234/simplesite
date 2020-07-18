@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios'
 import Post from "./Post"
-import Navbar from "./Navbar"
+import Navbar from "./Navbar";
+import PostData from "./postdata.json"
 class abc extends React.Component{
 
     constructor(){
@@ -26,8 +27,8 @@ class abc extends React.Component{
     
 
     render(){
-        const postArray=this.state.posts.map((post)=>{
-            return <Post id={post.id} title={post.title} body={post.body}/>
+        const postArray=PostData.map((post)=>{
+            return <Post id={post.id} Title={post.Title} Body={post.Body} Image={post.Image}/>
         })
         return(
             <React.Fragment>
